@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        aside,#right{
+            height: 250px;
+            border: 1px solid red;
+            width: 25%;
+        }
+        #center{
+            height:300px;
+            width: 70%;
+            border: 1px solid green;
+        }
+        .gridbox{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .inside{
+            border: 1px solid green;
+            height: 50%;
+            width: 2000px;
+        }
+
+    </style>
+</head>
+<body style="height: 100vh;">
+    <header>
+        <nav style="display: flex; justify-content: space-around; border: 2px solid black;">
+            <div>Home</div>
+            <div>About</div>
+            <div>Contact</div>
+            <div>CV</div>
+            <div>Facebook</div>
+        </nav>
+    </header>
+    <main>
+        <div id="hero" style="display: flex;">
+            <aside>advertise</aside>
+            <div id="center">center</div>
+            <div id="right">recent posts</div>
+        </div>
+        <div class="gridbox">
+            <div class="inside">1</div>
+            <div class="inside">2</div>
+            <div class="inside">3</div>
+            <div class="inside">4</div>
+        </div>
+    </main>
+    <footer style="display:flex;justify-content:  center;">
+        <p>@2024 copyright All Right reserved</p>
+    </footer>
+</body>
+</html>
