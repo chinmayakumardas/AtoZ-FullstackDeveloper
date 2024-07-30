@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example</title>
+</head>
+<script>
+    function submits(){
+        event.preventDefault(); // Prevent form from submitting
+        console.log(document.getElementById('name').value)
+        document.getElementsByClassName('op')[0].innerHTML=document.getElementById('name').value;
+    }
+</script>
+<body>
+    <form action="">
+        Name: <input id="name" oninput="submits()" type="text" placeholder="Enter name"  >
+        
+    
+
+    <div class="op"></div>
+</form>
+</body>
+</html>
