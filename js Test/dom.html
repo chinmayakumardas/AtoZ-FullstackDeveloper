@@ -6,19 +6,36 @@
     <title>DOM Example</title>
 </head>
 <script>
-    function submits(){
-        event.preventDefault(); // Prevent form from submitting
-        console.log(document.getElementById('name').value)
-        document.getElementsByClassName('op')[0].innerHTML=document.getElementById('name').value;
+   function submitbtn(){
+   
+    event.preventDefault();
+        let text=document.getElementById('inputs').value;
+        console.log(text)
+        let output=document.getElementsByClassName('op')[0];
+        
+       let elem=document.createElement('p');
+        output.appendChild(elem)
+
+        elem.innerText=text
+    }
+   function delbtn(){
+   
+    event.preventDefault();
+    let output = document.getElementsByClassName('op')[0];
+            if (output.lastChild) {
+                output.removeChild(output.lastChild);
+            }
+       
+    
+        
     }
 </script>
 <body>
-    <form action="">
-        Name: <input id="name" oninput="submits()" type="text" placeholder="Enter name"  >
-        
-    
+    <input id="inputs" type="text" placeholder="enter the name">
+    <button onclick="submitbtn()">Enter</button>
+    <button onclick="delbtn()">Del</button>
+    <div class="op">
 
-    <div class="op"></div>
-</form>
+    </div>
 </body>
 </html>
