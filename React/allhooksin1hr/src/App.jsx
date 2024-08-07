@@ -1,17 +1,8 @@
-import BasicHook from "./AllHooks/BasicHook"
-import EffectHookuse from "./AllHooks/EffectHookuse"
+import React from 'react'
 
-
-
-
-function App() {
- 
-
+const App = () => {
   return (
-    <>
-    {/* <BasicHook/> */}
-      <EffectHookuse/> 
-    </>
+    <div>App</div>
   )
 }
 
