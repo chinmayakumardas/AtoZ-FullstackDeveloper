@@ -140,7 +140,7 @@ const Cards = () => {
     
    
     return (
-       <div className="main flex flex-col">
+       <div className="main flex flex-col px-20">
         {
            // true&&<h1>Cards Componets</h1>  or
            people.length>0?<h1 className='text-2xl font-bold '>* List of People</h1>:<h1 className='text-2xl font-bold '>* No people found</h1>

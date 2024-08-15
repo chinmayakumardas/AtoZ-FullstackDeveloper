@@ -1,7 +1,4 @@
-
-
 import { useState } from "react";
-
 
 function Form2() {
   const [formData, setformData] = useState({
@@ -9,18 +6,18 @@ function Form2() {
     lastname: "",
     email: "",
     country: "",
-    street:"",
-    city:"",
+    street: "",
+    city: "",
     state: "",
-    pincode:"",
-    adult:true,
-    singing:false,
-    dancing:false,
-    sport:false,
+    pincode: "",
+    adult: true,
+    singing: false,
+    dancing: false,
+    sport: false,
   });
   console.log(formData);
 
-  function changeHandler(event){
+  function changeHandler(event) {
     const { name, value, checked, type } = event.target;
     setformData((prevFormData) => {
       return {
@@ -28,7 +25,6 @@ function Form2() {
         [name]: type === "checkbox" ? checked : value,
       };
     });
-
   }
 
   function submitHandler(event) {
@@ -43,10 +39,9 @@ function Form2() {
         onSubmit={submitHandler}
         className="flex flex-col w-[500px] justify-center items-center mx-auto"
       >
-      {/* first name */}
+        {/* first name */}
         <lable htmlFor="firstname">First Name</lable>
         <input
-         
           className="pl-2 rounded-md"
           type="text"
           id="firstname"
@@ -79,7 +74,13 @@ function Form2() {
         ></input>
         {/* country */}
         <label htmlFor="country">Country</label>
-        <select id="country" name="country" className="pl-2 rounded-md w-[38%]" onChange={changeHandler}  value={formData.country}>
+        <select
+          id="country"
+          name="country"
+          className="pl-2 rounded-md w-[38%]"
+          onChange={changeHandler}
+          value={formData.country}
+        >
           <option>India</option>
           <option>USA</option>
           <option>Japan</option>
@@ -96,10 +97,9 @@ function Form2() {
           onChange={changeHandler}
           value={formData.street}
         ></input>
-       
-      
-         {/* city */}
-         <lable htmlFor="city">City</lable>
+
+        {/* city */}
+        <lable htmlFor="city">City</lable>
         <input
           className="pl-2 rounded-md"
           type="text"
@@ -135,21 +135,53 @@ function Form2() {
         {/* Adult or not */}
         <lable htmlFor="adult">Adult or Not ?</lable>
         <div className="gap-2 flex ">
-        <input type="radio" id="yes" name="adult" onChange={changeHandler}  value="yes"></input>
-        <label htmlFor="yes">Yes</label>
-        <input type="radio" id="no" name='adult' onChange={changeHandler}  value="no"></input>
-        <label htmlFor="no">No</label>
+          <input
+            type="radio"
+            id="yes"
+            name="adult"
+            onChange={changeHandler}
+            value="yes"
+          ></input>
+          <label htmlFor="yes">Yes</label>
+          <input
+            type="radio"
+            id="no"
+            name="adult"
+            onChange={changeHandler}
+            value="no"
+          ></input>
+          <label htmlFor="no">No</label>
         </div>
         <fieldset className="gap-5">
           <legend className="">By Email</legend>
-          <input type="checkbox" id='singing' name="singing"  onChange={changeHandler}  value={formData.singing}></input>
+          <input
+            type="checkbox"
+            id="singing"
+            name="singing"
+            onChange={changeHandler}
+            value={formData.singing}
+          ></input>
           <label>Singing</label>
-          <input type="checkbox" id='dancing' name="dancing"  onChange={changeHandler}  value={formData.dancing}></input>
+          <input
+            type="checkbox"
+            id="dancing"
+            name="dancing"
+            onChange={changeHandler}
+            value={formData.dancing}
+          ></input>
           <label>Dancing</label>
-          <input type="checkbox" id='sport' name="sport"  onChange={changeHandler}  value={formData.sport}></input>
+          <input
+            type="checkbox"
+            id="sport"
+            name="sport"
+            onChange={changeHandler}
+            value={formData.sport}
+          ></input>
           <label>Sport</label>
         </fieldset>
-        <button className="bg-blue-500 mt-4 h-[40px] text-white rounded-md px-4">Submit</button>
+        <button className="bg-blue-500 mt-4 h-[40px] text-white rounded-md px-4">
+          Submit
+        </button>
       </form>
     </div>
   );
