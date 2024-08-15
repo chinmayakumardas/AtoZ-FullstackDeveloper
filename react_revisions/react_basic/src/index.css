@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.active{
+    color: #ad1e38;
+    border-bottom: 3px solid;
+    transition: all 2 ease-in ;
+}
